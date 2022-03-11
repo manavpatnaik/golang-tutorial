@@ -34,4 +34,5 @@ func main() {
 
 	area := circleArea(4.5)
 	fmt.Println("Circle area", area)
+	fmt.Printf("Circle area: %.2f", area)
 }
