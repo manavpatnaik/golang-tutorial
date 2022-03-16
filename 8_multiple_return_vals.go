@@ -19,4 +19,9 @@ func getInitials(n string) (string, string) {
 func main() {
 	fmt.Println(getInitials("Manav Patnaik"))
 	fmt.Println(getInitials("Gaurav Patnaik"))
+
+	// Declared in another file, but in the same package
+	// Run using: go run 8_multiple_return_vals.go 9_package_scope.go
+	fmt.Println(points)
+	sayHello("Manav")
 }
