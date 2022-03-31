@@ -6,6 +6,10 @@ import (
 	"net/rpc"
 )
 
+type Args struct {
+	A, B int
+}
+
 type Item struct {
 	Title string
 	Body  string
@@ -41,4 +45,8 @@ func main() {
 	client.Call("API.GetByName", "First", &reply)
 	fmt.Println("first item: ", reply)
 
+	res := 0
+	args := Args{3, 4}
+	client.Call("Arithmetic.Add", args, &res)
+	fmt.Printf("Res: %d\n", res)
 }
